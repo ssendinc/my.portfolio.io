@@ -1,0 +1,367 @@
+
+// main: main.scss
+
+
+.header{
+    padding-bottom:60px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    .topmenu{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    
+        .button{
+            .download{
+                text-decoration: none;
+                color: #fff;
+                font-size: 16px;
+                text-transform: uppercase;
+                font-weight: 600;
+                display: inline-block;
+                background-color: #ff451b;
+                padding: 14px 50px;
+                border-radius: 10px;
+                white-space: nowrap; 
+            }
+        }
+        .logo{
+            img{
+                width: 170px;
+            }
+        }
+    
+    }
+     
+}
+
+
+.fixed_background{
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.landing-center{
+    position: absolute;
+    top: 110px;
+    left: 15%;
+    right: 15%;
+    bottom: 70px;
+    z-index: 4;
+}
+
+.section{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 70px;
+    .background{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+    .content{
+        position: absolute;
+        z-index: 2;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: 100%;
+        text-align: center;
+        padding: 0 10px;
+    }
+}
+
+.content{
+    position: absolute;
+    top: 20%;
+    left: 15%;
+    right: 15%;
+    bottom: 70px;
+    z-index: 4;
+    #home{
+        width: 100%;
+        height: auto;
+        float: left;
+        padding: 70px;
+        background-color: #ffffff;
+        border-radius: 15px;
+        margin-bottom: 70px;
+        overflow: hidden;
+        z-index: 99;
+        display: none;
+        .about{
+            width: 100%;
+            height: auto;
+            clear: both;
+            float: left;
+            display: flex;
+            .left{
+                width: 50%;
+                position: relative;
+                &_inner{
+                    width: 100%;
+                    height: auto;
+                    display: flex;
+                    align-items: flex-start;
+                    .details{
+                        position: relative;
+                        min-width: 47%;
+                        left: -55px;
+                        margin-top: 55px;
+                        background-color: #ff451b;
+                        padding: 36px 40px 35px 40px;
+                        z-index: 1;
+                        border-radius: 15px;
+
+                    }
+                    .image{
+                        img{
+                            width: 350px;
+                            height: 100%;
+                        }
+                    }
+                }
+            }
+            .right{
+                width: 50%;
+                padding-left: 75px;
+                position: relative;
+                top: -8px;
+                .maintitle{
+                    span{
+                        font-size: 47px;
+                        color: #ff451b;
+                        font-weight: 700;
+                        display: inline-block;
+                        margin-bottom: 6px;
+                    }
+                    h3{
+                        font-size: 47px;
+                        font-weight: 700;
+                    }
+                    
+                }
+                .text{
+                    color: #888888;
+                }
+                 &_bigger{
+                    font-size: 21px;
+                    font-weight: 500;
+                    color: #222;
+                    line-height: 1.6;
+                 }
+                 .cvbtn{
+                    a{
+                        text-decoration: none;
+                        color: #fff;
+                        font-size: 16px;
+                        text-transform: uppercase;
+                        font-weight: 600;
+                        display: inline-block;
+                        background-color: #ff451b;
+                        padding: 14px 50px;
+                        border-radius: 10px;
+                        white-space: nowrap;  
+                        &:hover{
+                            background-color: #ffb324;
+                        }
+
+                    }
+                 }
+            }
+        }
+    }
+}
+
+#talent{
+    width: 100%;
+    height: 100%;
+    float: left;
+    padding: 70px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    margin-bottom: 70px;
+    overflow: hidden;
+    z-index: 99;
+    display: none;
+    .talent{
+        width: 100%;
+        height: auto;
+        clear: both;
+        float: left;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        
+    }
+}
+
+@keyframes pulse {
+    0% {
+      transform: translate(-50%,-50%) scale(0.5);
+      opacity: 1;
+    }
+    100% {
+      transform: translate(-50%,-50%)  scale(1);
+      opacity: 0;
+    }
+  }
+  
+  $dot-size: 100px;
+  $button-size: 100px;
+  
+  .dot {
+    width: $dot-size;
+    height: $dot-size;
+    position: absolute;
+    top: -$dot-size / 2;
+    left: -$dot-size / 2;
+    pointer-events: none;
+    transform: rotate(-90deg) scale(#{ $button-size/ ($dot-size/3)});
+    z-index: 1;
+  
+    &.button-hover {
+      svg {
+        transform: rotate(-90deg) scale(#{ $button-size/ ($dot-size/3)});
+      }
+    }
+  
+    svg {
+      width: 100%;
+      position: absolute;
+      transform: rotate(-90deg);
+      transition: 600ms all cubic-bezier(0.23, 1, 0.32, 1);
+  
+      path {
+        width: 20px;
+        height: 20px;
+        fill:#6a778e;
+        transition: 600ms all cubic-bezier(0.23, 1, 0.32, 1);
+      }
+    }
+  }
+  
+.skills {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+  }
+  
+  .skills-bar {
+    padding: 25px 30px;
+  }
+  
+  .skills-bar .bar {
+    margin: 25px 0;
+  }
+  
+  .skills-bar .bar .info span {
+    font-size: 1rem;
+    font-weight: 500;
+  }
+  
+  .skills-bar .bar .info {
+    margin-bottom: 8px;
+    color: #07374a;
+  }
+  
+  .skills-bar .bar .progress-line {
+    position: relative;
+    height: 10px;
+    width: 550px;
+    background: #f0f0f0;
+    border-radius: 10px;
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+  }
+  
+  .bar .progress-line span {
+    position: absolute;
+    background: #25b79f;
+    height: 100%;
+    border-radius: 10px;
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: animate 1s 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+  }
+  
+  @keyframes animate {
+    100% {
+      transform: scaleX(1);
+    }
+  }
+  
+  .progress-line .html {
+    width: 80%;
+  }
+  .progress-line .css {
+    width: 70%;
+  }
+  .progress-line .bootstrap {
+    width: 82%;
+  }
+  .progress-line .javascript {
+    width: 62%;
+  }
+  .progress-line .c {
+    width: 90%;
+  }
+  
+  .bar .progress-line span::after {
+    position: absolute;
+    right: 0;
+    top: -28px;
+    color: #f0f0f0;
+    font-size: 12px;
+    font-weight: 700;
+    background: #07374a;
+    padding: 1px 8px;
+    border-radius: 3px;
+  }
+  
+  
+  .progress-line .html::after {
+    content: "90%";
+  }
+  .progress-line .css::after {
+    content: "85%";
+  }
+  .progress-line .bootstrap::after {
+    content: "85%";
+  }
+  .progress-line .javascript::after {
+    content: "60%";
+  }
+  .progress-line .c::after {
+    content: "90%";
+  }
+  
+  /* ////........Media Query........//// */
+  
+  @media (max-width: 700px) {
+      .skills{
+          width: 80%;
+      }
+  
+      .skills-bar .bar .progress-line{
+          width: 100%;
+      }
+  }      
+
+
